@@ -3,3 +3,20 @@
 натуральных чисел выполняется равенство: 1+2+...+n = n(n+1)/2,
  где n - любое натуральное число.
 """
+
+
+def equality(stop, start=1):
+    """Принимает конечное значение последовательности
+       и проверяет справедливость равенства 1+2+...+n = n(n+1)/2"""
+    if start == stop:
+        return stop
+    left = start + equality(stop, start+1)
+    return left
+
+
+LIST_LEN = int(input('Введите длину последовательности: '))
+RIGHT = LIST_LEN * (LIST_LEN + 1) / 2
+if equality(LIST_LEN) == RIGHT:
+    print("Равенство справедливо!")
+else:
+    print("Равенство не справедливо!")
