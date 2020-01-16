@@ -5,3 +5,17 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+
+
+from random import randint
+
+
+NUMBERS_LST = [randint(1, 100) for i in range(10)]
+INDEX_LST = []
+
+for i in NUMBERS_LST:
+    if i % 2 == 0:
+        INDEX_LST.append(NUMBERS_LST.index(i))
+
+print(f'{NUMBERS_LST}\n '
+      f'{INDEX_LST}')

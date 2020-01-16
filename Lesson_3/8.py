@@ -4,3 +4,16 @@
 записывать ее в последнюю ячейку строки.
 В конце следует вывести полученную матрицу.
 """
+
+
+MATRIX = []
+for i in range(4):
+    LINE = []
+    a = 4
+    for j in range(4):
+        LINE.append(int(input(f'Введите {a} число(а): ')))
+        a -= 1
+    LINE.append(sum(LINE))
+    MATRIX.append(LINE)
+for i in MATRIX:
+    print(f'{i}')
